@@ -21,7 +21,7 @@ class SignIn extends Component {
       try {                    
         const response = await api.post("/pegaToken", { username, password });                
         login(response.data.token);
-        this.props.history.push("/autenticado");
+        this.props.history.push("/home");
       } catch (err) {
         this.setState({
           error:
